@@ -1,0 +1,39 @@
+:root{
+    --navActiveElementColor: #ffffff;
+    --navBgForMobile: rgba(0, 97, 168, .7);
+    --navElementFontColor: #d3d3d3;
+}
+
+.nav{
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:100%;
+    background: var(--navBgForMobile);
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width:100%;
+    height:50%;
+    list-style: none;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: var(--navElementFontColor);
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.nav__link--active{
+    color:var(--navActiveElementColor);
+}

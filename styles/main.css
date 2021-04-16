@@ -1,0 +1,28 @@
+@import url('./components/nav.css');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --basicFontSize: 10px;
+    --buttonBg:#2978b5;
+    --fontColor: #132c33;
+    --siteBg: #fbe0c4;
+}
+
+html{
+    font-family: 'Antonio', sans-serif;
+    font-size: var(--basicFontSize);
+    font-weight: 300;
+}
+
+body{
+    background: var(--siteBg);
+}
+
+button, input{
+    outline: 0;
+}
