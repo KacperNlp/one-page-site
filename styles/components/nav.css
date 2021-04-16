@@ -1,19 +1,25 @@
 :root{
     --navActiveElementColor: #ffffff;
-    --navBgForMobile: rgba(0, 97, 168, .7);
+    --navBgForMobile: rgba(0, 97, 168, .6);
     --navElementFontColor: #d3d3d3;
 }
 
 .nav{
     position: fixed;
     top:0;
-    left:0;
+    left:-100%;
     display: flex;
     align-items: center;
     justify-content: center;
     width:100%;
     height:100%;
     background: var(--navBgForMobile);
+    z-index: 10;
+    transition: .3s;
+}
+
+.nav--active{
+    left:0;
 }
 
 .nav__list{
@@ -36,4 +42,43 @@
 
 .nav__link--active{
     color:var(--navActiveElementColor);
+}
+
+.bars{
+    position: fixed;
+    top:5%;
+    right:5%;
+    width:40px;
+    height:40px;
+    z-index: 15;
+    background: transparent;
+    border:none;
+    overflow: hidden;
+}
+
+.bars::before,
+.bars::after{
+    position: absolute;
+    content: '';
+    width:100%;
+    height:2px;
+    transform-origin: center left;
+    transition: .2s;
+    background: var(--fontColor);
+}
+
+.bars::before{
+    transform: translate(-20px, -15px);
+}
+
+.bars::after{
+    transform: translate(-5px, -5px);
+}
+
+.bars--active::before{
+    transform: rotate(45deg) translate(-21px, 0px);
+}
+
+.bars--active::after{
+    transform: rotate(-45deg) translate(-19px, 0px);
 }
