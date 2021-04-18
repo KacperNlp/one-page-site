@@ -1,0 +1,14 @@
+.button{
+    background: var(--buttonBg);
+    padding:10px 20px;
+    color:#fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border:2px solid var(--buttonBg);
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.button:hover{
+    background: var(--buttonBgHover);
+}

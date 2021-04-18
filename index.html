@@ -6,9 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/separatelyHomePageStyles/mainPageHeader.css">
+    <link rel="stylesheet" href="/styles/separatelyHomePageStyles/services.css">
 </head>
 
 <body>
@@ -20,6 +24,48 @@
         </ul>
     </nav>
     <button class="bars" id="bars"></button>
+
+    <header class="header">
+        <div class="header__img">
+            <div class="header__content">
+                <p class="header__bold-text">Lorem ipsum dolor</p>
+                <p class="header__small-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi ex,
+                    pharetra placerat tortor ac, mollis sodales libero. Vestibulum fringilla sed velit quis tincidunt.
+                    Vestibulum fermentum pharetra felis.</p>
+                <a href="/sideSites/contact.html" class="button header__button">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section services">
+            <h2 class="section-header">Services</h2>
+            <div class="services__container">
+                <div class="services__tile">
+                    <span class="services__icon fas fa-code-branch"></span>
+                    <h3 class="services__tile-header">Lorem ipsum.</h3>
+                    <p class="services__tile-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut
+                        dicta rerum earum sed minus consequuntur? Impedit earum voluptatem dolorem ratione iusto.
+                        Dolores,
+                        dolore in.</p>
+                </div>
+                <div class="services__tile">
+                    <span class="services__icon fab fa-angellist"></span>
+                    <h3 class="services__tile-header">Lorem, ipsum dolor.</h3>
+                    <p class="services__tile-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio ad
+                        tenetur, similique ullam tempore voluptates possimus, soluta illo nihil cum totam nostrum.</p>
+                </div>
+                <div class="services__tile">
+                    <span class="services__icon fas fa-award"></span>
+                    <h3 class="services__tile-header">Lorem, ipsum.</h3>
+                    <p class="services__tile-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum nulla
+                        dolorum cupiditate, ullam fugiat tenetur velit, tempore veritatis aut expedita non ipsa
+                        voluptatum
+                        nobis vero?</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script type="module" src="/js/main.js"></script>
 </body>

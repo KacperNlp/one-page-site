@@ -1,4 +1,5 @@
 @import url('./components/nav.css');
+@import url('./components/button.css');
 
 *{
     padding:0;
@@ -9,6 +10,7 @@
 :root{
     --basicFontSize: 10px;
     --buttonBg:#2978b5;
+    --buttonBgHover:#1f6092;
     --fontColor: #132c33;
     --siteBg: #fbe0c4;
 }
@@ -21,8 +23,13 @@ html{
 
 body{
     background: var(--siteBg);
+    height:300vh;
 }
 
 button, input{
     outline: 0;
+}
+
+.section{
+    margin:100px 0;
 }

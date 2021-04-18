@@ -1,7 +1,10 @@
 :root{
-    --navActiveElementColor: #ffffff;
+    --navActiveElementColorForMobile: #ffffff;
+    --navActiveElementColorForDesktop: #0f0f0f;
     --navBgForMobile: rgba(0, 97, 168, .6);
-    --navElementFontColor: #d3d3d3;
+    --navBgForDesktop: #dabb99;
+    --navElementFontColorForMobile: #d3d3d3;
+    --navElementFontColorForDesktop: #5c5656;
 }
 
 .nav{
@@ -22,6 +25,20 @@
     left:0;
 }
 
+@media (min-width:1024px) {
+    .nav{
+        position: absolute;
+        left:0;
+        height:60px;
+        background: transparent;
+    }
+
+    .nav--active{
+        position: fixed;
+        background: var(--navBgForDesktop);
+    }
+}
+
 .nav__list{
     display: flex;
     flex-direction: column;
@@ -32,16 +49,42 @@
     list-style: none;
 }
 
+
+@media (min-width:1024px) {
+    .nav__list{
+        flex-direction: row;
+        max-width: 800px;
+    }
+}
+
 .nav__link{
     text-decoration: none;
-    color: var(--navElementFontColor);
+    color: var(--navElementFontColorForMobile);
     font-size: 1.4rem;
     letter-spacing: 1px;
     transition: .3s;
 }
 
+.nav__link:hover{
+    color:var(--navActiveElementColorForMobile);
+}
+
 .nav__link--active{
-    color:var(--navActiveElementColor);
+    color:var(--navActiveElementColorForMobile);
+}
+
+@media (min-width:1024px) {
+    .nav--active .nav__link{
+        color: var(--navElementFontColorForDesktop)
+    }
+
+    .nav--active .nav__link:hover{
+        color:var(--navActiveElementColorForDesktop);
+    }
+    
+    .nav--active .nav__link--active{
+        color:var(--navActiveElementColorForDesktop);
+    }
 }
 
 .bars{
@@ -81,4 +124,10 @@
 
 .bars--active::after{
     transform: rotate(-45deg) translate(-19px, 0px);
+}
+
+@media (min-width:1024px) {
+    .bars{
+        display: none;
+    }
 }

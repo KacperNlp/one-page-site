@@ -1,3 +1,9 @@
 import { navigation } from "./components/Navigation.js";
 
-navigation.init();
+const initAll = () => {
+  navigation.init();
+};
+
+initAll();
+
+window.addEventListener("resize", initAll);
