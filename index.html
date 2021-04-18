@@ -9,59 +9,70 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/separatelyHomePageStyles/mainPageHeader.css">
-    <link rel="stylesheet" href="/styles/separatelyHomePageStyles/services.css">
 </head>
 
 <body>
     <nav class="nav" id="nav">
         <ul class="nav__list">
-            <li class="nav__element"><a class="nav__link nav__link--active" href="#">Home</a></li>
-            <li class="nav__element"><a class="nav__link" href="/sideSites/about.html">About</a></li>
-            <li class="nav__element"><a class="nav__link" href="/sideSites//contact.html">Contact</a></li>
+            <li class="nav__element"><a class="nav__link nav__link--active" href="#header">Home</a></li>
+            <li class="nav__element"><a class="nav__link" href="#about">About</a></li>
+            <li class="nav__element"><a class="nav__link" href="#service">Service</a></li>
+            <li class="nav__element"><a class="nav__link" href="#contact">Contact</a></li>
         </ul>
     </nav>
     <button class="bars" id="bars"></button>
 
-    <header class="header">
+    <header class="header" id="header">
         <div class="header__img">
             <div class="header__content">
                 <p class="header__bold-text">Lorem ipsum dolor</p>
                 <p class="header__small-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi ex,
                     pharetra placerat tortor ac, mollis sodales libero. Vestibulum fringilla sed velit quis tincidunt.
                     Vestibulum fermentum pharetra felis.</p>
-                <a href="/sideSites/contact.html" class="button header__button">Contact</a>
+                <a href="#contact" class="button header__button">Contact</a>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="section services">
-            <h2 class="section-header">Services</h2>
-            <div class="services__container">
-                <div class="services__tile">
-                    <span class="services__icon fas fa-code-branch"></span>
-                    <h3 class="services__tile-header">Lorem ipsum.</h3>
-                    <p class="services__tile-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut
-                        dicta rerum earum sed minus consequuntur? Impedit earum voluptatem dolorem ratione iusto.
-                        Dolores,
-                        dolore in.</p>
-                </div>
-                <div class="services__tile">
-                    <span class="services__icon fab fa-angellist"></span>
-                    <h3 class="services__tile-header">Lorem, ipsum dolor.</h3>
-                    <p class="services__tile-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio ad
-                        tenetur, similique ullam tempore voluptates possimus, soluta illo nihil cum totam nostrum.</p>
-                </div>
-                <div class="services__tile">
-                    <span class="services__icon fas fa-award"></span>
-                    <h3 class="services__tile-header">Lorem, ipsum.</h3>
-                    <p class="services__tile-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum nulla
-                        dolorum cupiditate, ullam fugiat tenetur velit, tempore veritatis aut expedita non ipsa
-                        voluptatum
-                        nobis vero?</p>
+        <section class="about" id="about">
+            <div class="about__container">
+                <h2 class="about__header">Lorem ipsum dolor sit!</h2>
+                <p class="about__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloremque
+                    non veritatis ipsum tempora enim dolor cum quam? Repellat, eos et? Minus quas exercitationem
+                    molestiae cumque labore asperiores perferendis molestias.</p>
+                <a class="button about__button" href="https://pl.reactjs.org/" target="_blank">Get started!</a>
+            </div>
+        </section>
+
+        <section class="service section" id="service">
+            <div class="service__container">
+                <h2 class="service__header">Our service:</h2>
+                <div class="service__kinds-of-service">
+                    <div class="service__kind">
+                        <p class="service__icon fas fa-code"></p>
+                        <p class="serivce__name">Service nr.1</p>
+                        <p class="service__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Beatae, cum!</p>
+                    </div>
+                    <div class="service__kind">
+                        <p class="service__icon fab fa-react"></p>
+                        <p class="serivce__name">Service nr. 2</p>
+                        <p class="service__description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div class="service__kind">
+                        <p class="service__icon fas fa-code-branch"></p>
+                        <p class="serivce__name">Service nr. 3</p>
+                        <p class="service__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                            dolorum aut?</p>
+                    </div>
+                    <div class="service__kind">
+                        <p class="service__icon fas fa-globe-africa"></p>
+                        <p class="serivce__name">Service nr. 4</p>
+                        <p class="service__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
                 </div>
             </div>
         </section>

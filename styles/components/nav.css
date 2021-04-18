@@ -1,41 +1,47 @@
 :root{
-    --navActiveElementColorForMobile: #ffffff;
-    --navActiveElementColorForDesktop: #0f0f0f;
-    --navBgForMobile: rgba(0, 97, 168, .6);
-    --navBgForDesktop: #dabb99;
-    --navElementFontColorForMobile: #d3d3d3;
-    --navElementFontColorForDesktop: #5c5656;
+    --navActiveElementColorForNavWithoutBg: #ffffff;
+    --navActiveElementColorForNavWithBg: #0f0f0f;
+    --navBg: #f5ece2;
+    --navElementFontColorForNavWithoutBg: #b1aeae;
+    --navElementFontColorForNavWithBg: #776c6c;
 }
 
 .nav{
     position: fixed;
-    top:0;
-    left:-100%;
+    top:-280px;
+    left:0;
     display: flex;
     align-items: center;
     justify-content: center;
     width:100%;
-    height:100%;
-    background: var(--navBgForMobile);
+    height:280px;
+    background: var(--navBg);
     z-index: 10;
     transition: .3s;
 }
 
-.nav--active{
-    left:0;
+@media (orientation:landscape) {
+    .nav{
+        top:-220px;
+        height:220px;
+    }
 }
+
+.nav--active{
+    top:0;
+}
+
 
 @media (min-width:1024px) {
     .nav{
-        position: absolute;
-        left:0;
+        top:0;
         height:60px;
         background: transparent;
     }
 
     .nav--active{
         position: fixed;
-        background: var(--navBgForDesktop);
+        background: var(--navBg);
     }
 }
 
@@ -59,31 +65,43 @@
 
 .nav__link{
     text-decoration: none;
-    color: var(--navElementFontColorForMobile);
+    color: var(--navElementFontColorForNavWithBg);
     font-size: 1.4rem;
     letter-spacing: 1px;
     transition: .3s;
 }
 
 .nav__link:hover{
-    color:var(--navActiveElementColorForMobile);
+    color:var(--navActiveElementColorForNavWithBg);
 }
 
 .nav__link--active{
-    color:var(--navActiveElementColorForMobile);
+    color:var(--navActiveElementColorForNavWithBg);
 }
 
 @media (min-width:1024px) {
+    .nav__link{
+        color: var(--navElementFontColorForNavWithoutBg);
+    }
+
+    .nav__link:hover{
+        color: var(--navActiveElementColorForNavWithoutBg);
+    }
+
+    .nav__link--active{
+        color: var(--navActiveElementColorForNavWithoutBg);
+    }
+
     .nav--active .nav__link{
-        color: var(--navElementFontColorForDesktop)
+        color: var(--navElementFontColorForNavWithBg);
     }
 
     .nav--active .nav__link:hover{
-        color:var(--navActiveElementColorForDesktop);
+        color:var(--navActiveElementColorForNavWithBg);
     }
-    
+
     .nav--active .nav__link--active{
-        color:var(--navActiveElementColorForDesktop);
+        color:var(--navActiveElementColorForNavWithBg);
     }
 }
 

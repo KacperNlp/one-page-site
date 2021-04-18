@@ -9,7 +9,6 @@ class Navigation {
   constructor() {
     this.bars = document.getElementById(BARS_ID);
     this.navigation = document.getElementById(NAV_ID);
-    this.prevScrollValue = 0;
   }
 
   init() {
@@ -30,11 +29,8 @@ class Navigation {
     const { scrollY } = window;
     const { navClass } = CLASSES_FOR_BAR_AND_NAV;
 
-    if (scrollY > this.prevScrollValue || scrollY < 100)
-      this.navigation.classList.remove(navClass);
+    if (scrollY < 100) this.navigation.classList.remove(navClass);
     else this.navigation.classList.add(navClass);
-
-    this.prevScrollValue = scrollY;
   };
 }
 
