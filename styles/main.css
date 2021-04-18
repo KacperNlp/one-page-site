@@ -1,9 +1,11 @@
 @import url('./components/button.css');
 @import url('./components/about.css');
+@import url('./components/contact.css');
+@import url('./components/footer.css');
 @import url('./components/header.css');
-@import url('./components/services.css');
-@import url('./components/portfolio.css');
 @import url('./components/nav.css');
+@import url('./components/portfolio.css');
+@import url('./components/services.css');
 
 *{
     padding:0;
@@ -16,6 +18,9 @@
     --buttonBg:#2978b5;
     --buttonBgHover:#1f6092;
     --fontColor: #132c33;
+    --footerBg: #e7dacc;
+    --inputBg:#e9e0d7;
+    --inputHoverBg:#fcf9f5;
     --siteBg: #f5ece2;
 }
 
@@ -30,7 +35,7 @@ body{
     background: var(--siteBg);
 }
 
-button, input{
+button, input, textarea{
     outline: 0;
 }
 
