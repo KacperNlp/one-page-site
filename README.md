@@ -3,10 +3,10 @@ Site built in clear HTML and CSS with JavaScript. I didn't make this project (I 
 
 ## Technologies
 <ul>
-  <li>HTML</li>,
-  <li>CSS</li>,
-  <li>JavaScript</li>,
-  <li>BEM</li>.
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>BEM</li>
 </ul>
 
 ## Links
